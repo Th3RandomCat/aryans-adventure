@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan's Adventure - RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ Aryan's Adventure</h1>
+            <p class="subtitle">A Text-Based RPG</p>
+        </header>
+
+        <div class="main-content">
+            <div class="game-area">
+                <div id="story" class="story-text"></div>
+                <div id="choices" class="choices-container"></div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="stats-panel">
+                    <h3>Character Stats</h3>
+                    <div class="stat">
+                        <span>Health:</span>
+                        <div class="stat-bar">
+                            <div id="health-bar" class="stat-fill"></div>
+                        </div>
+                        <span id="health-text">100/100</span>
+                    </div>
+                    <div class="stat">
+                        <span>Experience:</span>
+                        <div class="stat-bar">
+                            <div id="exp-bar" class="stat-fill"></div>
+                        </div>
+                        <span id="exp-text">0/100</span>
+                    </div>
+                    <div class="stat-grid">
+                        <div><span class="label">Strength</span><span id="strength" class="value">10</span></div>
+                        <div><span class="label">Intelligence</span><span id="intelligence" class="value">10</span></div>
+                        <div><span class="label">Agility</span><span id="agility" class="value">10</span></div>
+                        <div><span class="label">Level</span><span id="level" class="value">1</span></div>
+                    </div>
+                </div>
+                <div class="inventory-panel">
+                    <h3>Inventory</h3>
+                    <div id="inventory" class="inventory-list"></div>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <button id="restart-btn" class="btn-restart">New Game</button>
+            <button id="save-btn" class="btn-save">Save Game</button>
+            <button id="load-btn" class="btn-load">Load Game</button>
+        </footer>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
