@@ -3,59 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan's Adventure - RPG</title>
+    <title>Aryan's Adventure - Text Adventure RPG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scan-line"></div>
     <div class="container">
         <header>
-            <h1>⚔️ Aryan's Adventure</h1>
-            <p class="subtitle">A Text-Based RPG</p>
+            <h1>ARYAN'S ADVENTURE</h1>
+            <p class="subtitle">A TEXT ADVENTURE GAME</p>
         </header>
 
         <div class="main-content">
-            <div class="game-area">
-                <div id="story" class="story-text"></div>
-                <div id="choices" class="choices-container"></div>
+            <div class="story-text" id="story"></div>
+            
+            <div class="stats-line" id="stats">
+                <div class="stat-item">
+                    <span class="stat-label">HEALTH:</span>
+                    <span class="stat-value" id="health-text">100/100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">LEVEL:</span>
+                    <span class="stat-value" id="level-text">1</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">EXP:</span>
+                    <span class="stat-value" id="exp-text">0/100</span>
+                </div>
             </div>
 
-            <aside class="sidebar">
-                <div class="stats-panel">
-                    <h3>Character Stats</h3>
-                    <div class="stat">
-                        <span>Health:</span>
-                        <div class="stat-bar">
-                            <div id="health-bar" class="stat-fill"></div>
-                        </div>
-                        <span id="health-text">100/100</span>
-                    </div>
-                    <div class="stat">
-                        <span>Experience:</span>
-                        <div class="stat-bar">
-                            <div id="exp-bar" class="stat-fill"></div>
-                        </div>
-                        <span id="exp-text">0/100</span>
-                    </div>
-                    <div class="stat-grid">
-                        <div><span class="label">Strength</span><span id="strength" class="value">10</span></div>
-                        <div><span class="label">Intelligence</span><span id="intelligence" class="value">10</span></div>
-                        <div><span class="label">Agility</span><span id="agility" class="value">10</span></div>
-                        <div><span class="label">Level</span><span id="level" class="value">1</span></div>
-                    </div>
-                </div>
-                <div class="inventory-panel">
-                    <h3>Inventory</h3>
-                    <div id="inventory" class="inventory-list"></div>
-                </div>
-            </aside>
+            <div class="choices-container" id="choices"></div>
         </div>
 
         <footer>
-            <button id="restart-btn" class="btn-restart">New Game</button>
-            <button id="save-btn" class="btn-save">Save Game</button>
-            <button id="load-btn" class="btn-load">Load Game</button>
+            <button class="btn-restart" id="restart-btn">[NEW GAME]</button>
+            <button class="btn-save" id="save-btn">[SAVE]</button>
+            <button class="btn-load" id="load-btn">[LOAD]</button>
         </footer>
     </div>
+
     <script src="game.js"></script>
 </body>
 </html>
